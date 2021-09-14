@@ -2,7 +2,7 @@ package _00_Intro_to_Linked_Lists;
 
 public class LinkedListDemo {
 
-    public static void main(String[] args) {
+    public static <T> void main(String[] args) {
 
         /*
          * A LinkedList is a linear data structure, but unlike an ArrayList or
@@ -29,7 +29,23 @@ public class LinkedListDemo {
          * nodes.
          * 
          */
-
+    	Node<String> node;
+    	LinkedList<String> linkedList = new LinkedList<String>();
+    	linkedList.add("Hello");
+    	linkedList.add("Hi there");
+    	linkedList.add("My name is Roshan");
+    	linkedList.add("Nice to meet you");
+    	linkedList.add("Chicken");
+    	node = linkedList.getHead();
+    	System.out.println(node.getValue());
+    	System.out.println(linkedList.getTail().getValue());
+    	
+    	for (int i = 0; i < linkedList.size(); i++) {
+			System.out.println(node.getValue());
+			node = node.getNext();
+		}
+    	
+    	
     }
 
 }
