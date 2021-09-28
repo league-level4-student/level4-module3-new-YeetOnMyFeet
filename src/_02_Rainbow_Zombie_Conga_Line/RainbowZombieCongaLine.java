@@ -33,7 +33,7 @@ public class RainbowZombieCongaLine {
 
     // Make the passed in zombie the first Zombie in the conga line!
     public void engine(Zombie dancer) {
-
+    	//congaLine(0) = dancer;
     }
 
     // Make the passed in zombie the last Zombie in the conga line!

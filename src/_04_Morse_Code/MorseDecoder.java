@@ -5,12 +5,14 @@ import _03_Intro_to_Binary_Trees.BinaryTree;
 public class MorseDecoder {
 
     BinaryTree<MorseCode> mcTree = new BinaryTree<MorseCode>();
+    String hiddenMessage = "-.-- --- ..- .- .-. . .- -- .- --.. .. -. --.";
 
     public static void main(String[] args) {
 
         MorseDecoder md = new MorseDecoder();
         md.initialize();
         md.decode();
+        
 
     }
 
@@ -62,7 +64,14 @@ public class MorseDecoder {
      * Then try creating your own morse code message and decoding it!
      */
     void decode() {
-
+    	String [] array = hiddenMessage.split(" ");
+    	String temp = "";
+    	for (String string : array) {
+    		MorseCode morseCode2 = new MorseCode(string);
+			temp += mcTree.search(morseCode2).getValue().getDecoded();
+			System.out.println(string);
+		}
+    	System.out.println(temp);
+    	
     }
-
 }

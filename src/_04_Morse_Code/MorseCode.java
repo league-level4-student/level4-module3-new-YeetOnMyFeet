@@ -1,10 +1,14 @@
 package _04_Morse_Code;
 
+import _03_Intro_to_Binary_Trees.Node;
+
 public class MorseCode implements Comparable<MorseCode> {
 
     private String decoded;
     private String coded;
     private int position;
+   
+     
 
     public MorseCode(String decoded, String coded) {
 
@@ -34,7 +38,17 @@ public class MorseCode implements Comparable<MorseCode> {
      */
     @Override
     public int compareTo(MorseCode o) {
-
+    	 if (o.coded.length() < 1 || o.coded.equals("")) {
+			return 0;
+		} 	
+    	if (o.coded.charAt(position) == '-') {
+			return 1;
+		}
+    	
+    	else if (o.coded.charAt(position) == '.') {
+			return -1;
+		}
+    	
        return 0;
        
     }
