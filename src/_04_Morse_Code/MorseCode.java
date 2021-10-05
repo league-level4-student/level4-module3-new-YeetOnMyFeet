@@ -42,11 +42,11 @@ public class MorseCode implements Comparable<MorseCode> {
 			return 0;
 		} 	
     	if (o.coded.charAt(position) == '-') {
-			return 1;
+			return -1;
 		}
     	
     	else if (o.coded.charAt(position) == '.') {
-			return -1;
+			return 1;
 		}
     	
        return 0;
